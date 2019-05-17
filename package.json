@@ -2,12 +2,13 @@
   "name": "elm",
   "version": "2.0.1",
   "description": "vue2-elm",
-  "author": "cangdu <1264889788@qq.com>",
+  "author": "songtao",
   "private": true,
   "license": "GPL",
   "scripts": {
     "dev": "cross-env NODE_ENV=online node build/dev-server.js",
     "local": "cross-env NODE_ENV=local node build/dev-server.js",
+    "mock": "cross-env NODE_ENV=mock node build/dev-server.js",
     "build": "node build/build.js"
   },
   "dependencies": {
@@ -39,7 +40,7 @@
     "file-loader": "^0.9.0",
     "function-bind": "^1.0.2",
     "html-webpack-plugin": "^2.8.1",
-    "http-proxy-middleware": "^0.17.2",
+    "http-proxy-middleware": "^0.19.1",
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",

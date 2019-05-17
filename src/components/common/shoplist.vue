@@ -47,7 +47,7 @@
 		</ul>
 		<ul v-else class="animation_opactiy">
 			<li class="list_back_li" v-for="item in 10" :key="item">
-				<img src="../../images/shopback.svg" class="list_back_svg">
+				<!-- <img src="../../images/shopback.svg" class="list_back_svg"> -->
 			</li>
 		</ul>
 		<p v-if="touchend" class="empty_data">没有更多了</p>
@@ -66,7 +66,7 @@
 <script>
 
 import {mapState} from 'vuex'
-import {shopList} from 'src/service/getData'
+import {shopList} from 'src/service/common'
 import {imgBaseUrl} from 'src/config/env'
 import {showBack, animate} from 'src/config/mUtils'
 import {loadMore, getImgPath} from './mixin'

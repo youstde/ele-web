@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class='app'>
 		<transition name="router-fade" mode="out-in">
 			<keep-alive>
 			    <router-view v-if="$route.meta.keepAlive"></router-view>
@@ -8,7 +8,7 @@
     	<transition name="router-fade" mode="out-in">
 			<router-view v-if="!$route.meta.keepAlive"></router-view>
 		</transition>
-		<svg-icon></svg-icon>	
+		<svg-icon></svg-icon>
     </div>
 </template>
 
@@ -23,7 +23,11 @@
 </script>
 
 <style lang="scss">
-  	@import './style/common';
+    @import './style/common';
+  .app {
+    max-width: 640px;
+    margin: 0 auto;
+  }
 	.router-fade-enter-active, .router-fade-leave-active {
 	  	transition: opacity .3s;
 	}

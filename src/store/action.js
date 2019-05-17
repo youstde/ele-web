@@ -1,7 +1,7 @@
 import {
 	getUser,
 	getAddressList
-} from '../service/getData'
+} from '../service/common'
 import {
 	GET_USERINFO,
 	SAVE_ADDRESS
@@ -24,6 +24,6 @@ export default {
 		if(state.removeAddress.length > 0) return;
 
 		let addres = await getAddressList(state.userInfo.user_id);
-		commit(SAVE_ADDRESS, addres);	
+		commit(SAVE_ADDRESS, addres);
 	},
 }
