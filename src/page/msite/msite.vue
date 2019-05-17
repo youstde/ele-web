@@ -42,14 +42,13 @@
 
 <script>
 import {mapMutations} from 'vuex'
-// import {imgBaseUrl} from 'src/config/env'
 import headTop from 'src/components/header/head'
 import footGuide from 'src/components/footer/footGuide'
 import shopList from 'src/components/common/shoplist'
 import {msiteAddress, msiteFoodTypes, cityGuess} from 'src/service/common'
 import { groupcity } from './service'
-import 'src/plugins/swiper.min.js'
-import 'src/style/swiper.min.css'
+import Swiper from 'swiper'
+import 'swiper/dist/css/swiper.min.css'
 
 export default {
 	data(){
@@ -89,11 +88,11 @@ export default {
     		}
     		this.foodTypes = foodArr;
         }).then(() => {
-        	//初始化swiper
-        	new Swiper('.swiper-container', {
-		        pagination: '.swiper-pagination',
-		        loop: true
-		    });
+          //初始化swiper
+          var mySwiper = new Swiper('.swiper-container', {
+            autoplay: true,//可选选项，自动滑动
+          })
+
         })
 
         groupcity().then(res => {
